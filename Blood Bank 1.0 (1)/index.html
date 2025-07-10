@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Group Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h2>Blood Group Search</h2>
+    <input type="text" id="searchGroup" placeholder="Enter blood group (e.g., A+)">
+    <button onclick="searchByGroup()">Search</button>
+
+    <ul id="resultList"></ul>
+
+    <hr>
+
+    <div id="adminSection" style="display: none;">
+      <h3>Add New Person</h3>
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="text" id="address" placeholder="Address">
+      <input type="text" id="phone" placeholder="Phone Number">
+      <input type="text" id="blood" placeholder="Blood Group (e.g., B-)">
+      <button onclick="addPerson()">Add</button>
+    </div>
+
+    <hr>
+    <div>
+      <input type="password" id="adminPass" placeholder="Enter Admin Password">
+      <button onclick="checkAdmin()">Login as Owner</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
